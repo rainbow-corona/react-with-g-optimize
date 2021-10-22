@@ -2,7 +2,7 @@ import ESLintPlugin from 'eslint-webpack-plugin'
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import path from 'path'
-import { Configuration, HotModuleReplacementPlugin } from 'webpack'
+import { Configuration } from 'webpack'
 
 const config: Configuration = {
   mode: 'development',
@@ -31,7 +31,6 @@ const config: Configuration = {
     new HtmlWebpackPlugin({
       template: 'public/index.html',
     }),
-    new HotModuleReplacementPlugin(),
     new ForkTsCheckerWebpackPlugin({
       async: false,
     }),
